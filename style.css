@@ -1,75 +1,154 @@
-/* Add your CSS styles here */
-body {
-  font-family: Arial, sans-serif;
+/* Reset CSS */
+body, h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
 }
 
-.section {
-  padding: 50px 0;
-  text-align: center;
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
-.section-title {
-  font-size: 2em;
-}
-
-.section-description {
-  font-size: 1.2em;
-}
-
+/* Header styles */
 #toolbar {
-  background-color: #333;
-  color: white;
-  position: relative;
-  z-index: 1000;
+  background-color: lightblue;
 }
 
 #menu ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
 }
 
 #menu li {
-  display: inline-block;
   margin-right: 20px;
 }
 
 #menu a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 #menu a:hover {
-  color: #66c2ff;
+  background-color: #333;
 }
 
-.floating-menu {
-  position: fixed;
-  top: 0;
+/* Main content styles */
+main {
+  padding-top: 50px; /* Adjust for fixed header */
+}
+
+.section {
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Form styles */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+textarea, select, input[type="submit"] {
   width: 100%;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
-.photo-gallery {
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  #menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #menu li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Q&A section styles */
+.qa-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.photo-gallery img {
-  width: 200px;
-  height: 200px;
-  margin: 10px;
+.qa-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.qa-heading {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.qa-subheading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.qa-list {
+  list-style: none;
+}
+
+.qa-difference {
+  margin-bottom: 10px;
+}
+
+.qa-difference strong {
+  font-weight: bold;
+}
+
+.qa-details {
+  margin-top: 5px;
+}
+
+.qa-example {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Additional styles for enhanced visuals */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
   overflow: hidden;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
 }
 
 .video-container iframe {
@@ -81,58 +160,29 @@ body {
 }
 
 .social-like {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Adjust as needed */
 }
 
 .qr-code {
-  text-align: center;
-}
-
-.qa-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 300px; /* Adjust as needed */
 }
 
-.qa-item {
-  width: 70%;
-  margin-bottom: 30px;
-  border: 1px solid #ccc;
-  padding: 20px;
+/* Floating menu styles */
+.floating-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it appears above other content */
+  transition: top 0.3s; /* Add smooth transition effect */
 }
 
-.qa-heading {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.qa-subheading {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-.qa-list {
-  list-style: none;
-  padding: 0;
-}
-
-.qa-difference {
-  margin-bottom: 10px;
-}
-
-.qa-details {
-  margin-top: 5px;
-}
-
-#contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#contact label,
-#contact textarea,
-#contact select,
-#contact input[type="submit"] {
-  margin: 5px;
+.floating-menu:not(.floating) {
+  top: -100px; /* Hide the menu off-screen initially */
 }
