@@ -171,11 +171,17 @@
     
     .floating-menu {
       background-color: rgba(255, 111, 97, 0.95);
+      display: none; /* Initially hide floating menu */
       transition: top 0.3s;
     }
     
-    .floating-menu:not(.floating) {
-      top: -100px;
+    .floating-menu.show {
+      display: block; /* Show floating menu when needed */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
     }
   </style>
 </head>
@@ -305,25 +311,24 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   $(document).ready(function(){
-    // Hide all sections except the first one initially
-    $(".section:not(:first)").hide();
-
     // Floating toolbar
     var toolbar = $("#toolbar");
     var menu = $("#menu");
     var menuTop = menu.offset().top;
 
     $(document).scroll(function() {
-      toolbar.toggleClass("floating", $(this).scrollTop() > menuTop);
+      if ($(this).scrollTop() > menuTop) {
+        toolbar.addClass("show");
+      } else {
+        toolbar.removeClass("show");
+      }
     });
 
     // Click event for menu items
     $("#menu a").click(function(e){
       e.preventDefault();
       var target = $(this).attr('href');
-      $(".section").hide(); // Hide all sections
-      $(target).show(); // Show only the target section
-      $('html, body').animate({
+      $("html, body").animate({
         scrollTop: $(target).offset().top - toolbar.height() // Scroll to the section and consider the toolbar height
       }, 500);
     });
