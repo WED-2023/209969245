@@ -1,7 +1,26 @@
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
+#menu {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: #333; /* Dark background color */
+  color: white; /* Text color */
+  font-family: Arial, sans-serif; /* Font family */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+#menu li {
+  display: inline-block; /* Display menu items horizontally */
+  margin-right: 20px; /* Add space between menu items */
+}
+
+#menu li a {
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underlines */
+  padding: 15px; /* Add padding around text */
+  transition: color 0.3s; /* Smooth transition for text color */
+}
+
+#menu li a:hover {
+  color: #ffd700; /* Change text color on hover */
 }
