@@ -1,61 +1,56 @@
-/* Reset CSS */
-body, h1, h2, h3, h4, h5, h6, p, ul, li {
+/* Add your CSS styles here */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-/* Header styles */
-#toolbar {
-  background-color: #ff7f50;
-  padding: 10px 0;
-  width: 100%;
-  z-index: 1000; /* Ensure it appears above other content */
-}
-
-#menu {
+.section {
+  padding: 50px 0;
   text-align: center;
+}
+
+.section-title {
+  font-size: 2em;
+}
+
+.section-description {
+  font-size: 1.2em;
+}
+
+#toolbar {
+  background-color: #333;
+  color: white;
+  position: relative;
+  z-index: 1000;
 }
 
 #menu ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-#menu ul li {
+#menu li {
   display: inline-block;
   margin-right: 20px;
 }
 
-#menu ul li:last-child {
-  margin-right: 0;
-}
-
-#menu ul li a {
+#menu a {
+  color: white;
   text-decoration: none;
-  color: #fff;
+  transition: color 0.3s;
 }
 
-/* Main content styles */
-main {
-  padding-top: 70px; /* Adjust for fixed header */
+#menu a:hover {
+  color: #66c2ff;
 }
 
-.section {
-  padding: 50px 0;
-}
-
-.section-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.section-description {
-  font-size: 16px;
+.floating-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 .photo-gallery {
@@ -65,14 +60,16 @@ main {
 }
 
 .photo-gallery img {
-  width: 300px;
+  width: 200px;
+  height: 200px;
   margin: 10px;
 }
 
 .video-container {
   position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
 }
 
 .video-container iframe {
@@ -92,25 +89,31 @@ main {
 }
 
 .qa-container {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .qa-item {
-  margin-bottom: 40px;
+  width: 70%;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  padding: 20px;
 }
 
 .qa-heading {
-  font-size: 20px;
+  font-size: 1.5em;
   margin-bottom: 10px;
 }
 
 .qa-subheading {
-  font-size: 18px;
+  font-size: 1.2em;
   margin-bottom: 10px;
 }
 
 .qa-list {
   list-style: none;
+  padding: 0;
 }
 
 .qa-difference {
@@ -118,14 +121,18 @@ main {
 }
 
 .qa-details {
-  padding-left: 20px;
+  margin-top: 5px;
 }
 
-/* Floating toolbar styles */
-.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact label,
+#contact textarea,
+#contact select,
+#contact input[type="submit"] {
+  margin: 5px;
 }
