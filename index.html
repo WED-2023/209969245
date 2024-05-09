@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <title>Grandma's Amazing Website</title>
+  <title>Grandma's Website</title>
 </head>
 <body>
   
@@ -131,26 +131,31 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-$(document).ready(function(){
-  // Floating toolbar
-  var toolbar = $("#toolbar");
-  var menu = $("#menu");
-  var menuTop = menu.offset().top;
+  $(document).ready(function(){
+    // Hide all sections except the first one initially
+    $(".section:not(:first)").hide();
 
-  $(document).scroll(function() {
-    toolbar.toggleClass("floating", $(this).scrollTop() > menuTop);
+    // Floating toolbar
+    var toolbar = $("#toolbar");
+    var menu = $("#menu");
+    var menuTop = menu.offset().top;
+
+    $(document).scroll(function() {
+      toolbar.toggleClass("floating", $(this).scrollTop() > menuTop);
+    });
+
+    // Click event for menu items
+    $("#menu a").click(function(e){
+      e.preventDefault();
+      var target = $(this).attr('href');
+      $(".section").hide(); // Hide all sections
+      $(target).show(); // Show only the target section
+      $('html, body').animate({
+        scrollTop: $(target).offset().top - toolbar.height() // Scroll to the section and consider the toolbar height
+      }, 500);
+    });
   });
 
-  // Click event for menu items
-  $("#menu a").on('click', function(e){
-    e.preventDefault();
-    var target = $(this).attr('href');
-    $('html, body').animate({
-      scrollTop: $(target).offset().top - toolbar.height()
-    }, 500);
-  });
-});
 </script>
 </body>
 </html>
-
