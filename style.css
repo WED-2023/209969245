@@ -6,8 +6,8 @@ body {
 }
 
 header {
-  background-color: #3a7bd5; /* Dark blue toolbar color */
-  color: white;
+  background-color: #cfe2f3; /* Light blue toolbar color */
+  color: #1e2852; /* Dark blue text color */
   padding: 10px 0;
   text-align: center;
   position: fixed;
@@ -29,14 +29,14 @@ header {
 }
 
 #menu a {
-  color: #3a7bd5; /* Dark blue menu text color */
+  color: #1e2852; /* Dark blue menu text color */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 #menu a:hover {
-  color: #1e2852; /* Dark blue hover color */
+  color: #3a7bd5; /* Dark blue hover color */
 }
 
 main {
