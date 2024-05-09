@@ -2,12 +2,10 @@
 body {
   font-family: 'Arial', sans-serif;
   color: #1e2852; /* Dark blue text color */
-  line-height: 1.6;
   background-color: #eef2f6; /* Light blue background color */
 }
 
-/* Header styles */
-#toolbar {
+header {
   background-color: #3a7bd5; /* Dark blue toolbar color */
   color: white;
   padding: 10px 0;
@@ -18,8 +16,34 @@ body {
   top: 0;
 }
 
-/* Main content styles */
-section {
+#menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#menu li {
+  margin: 0 15px;
+}
+
+#menu a {
+  color: #3a7bd5; /* Dark blue menu text color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+#menu a:hover {
+  color: #1e2852; /* Dark blue hover color */
+}
+
+main {
+  padding-top: 60px;
+}
+
+.section {
   padding: 40px 20px;
   margin: 40px auto;
   max-width: 800px;
@@ -28,16 +52,38 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Menu styles */
-#menu a {
-  color: #3a7bd5; /* Dark blue menu text color */
+.section-title {
+  color: #3a7bd5; /* Dark blue section title */
+  margin-bottom: 20px;
 }
 
-#menu a:hover {
-  color: #1e2852; /* Dark blue hover color */
+.section-description {
+  color: #1e2852; /* Dark blue section description */
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-/* Floating menu styles */
+.qa-heading {
+  color: #3a7bd5; /* Dark blue Q&A heading */
+  margin-bottom: 10px;
+}
+
+.qa-example {
+  color: #1e2852; /* Dark blue Q&A example text */
+  font-style: italic;
+  line-height: 1.6;
+}
+
+textarea,
+select,
+input[type="submit"] {
+  color: #1e2852; /* Dark blue text color */
+  padding: 10px;
+  border: 1px solid #3a7bd5; /* Dark blue border */
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
 .floating-menu {
   background-color: rgba(58, 123, 213, 0.95); /* Dark blue floating menu */
 }
@@ -49,4 +95,51 @@ section {
   left: 0;
   width: 100%;
   z-index: 1000;
+}
+
+/* Slider styles */
+.photo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.slide {
+  float: left;
+  width: 100%;
+  position: relative;
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.photo-slider img {
+  width: 100%;
+}
+
+/* Navigation buttons styles */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
 }
