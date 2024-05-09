@@ -188,6 +188,7 @@ textarea, select, input[type="submit"] {
   top: 0;
   left: 0;
   width: 100%;
+  background-color: rgba(255, 127, 80, 0.8); /* Semi-transparent orange background */
   z-index: 1000; /* Ensure it appears above other content */
   transition: top 0.3s; /* Add smooth transition effect */
 }
@@ -195,4 +196,3 @@ textarea, select, input[type="submit"] {
 .floating-menu:not(.floating) {
   top: -100px; /* Hide the menu off-screen initially */
 }
-
