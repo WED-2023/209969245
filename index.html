@@ -11,8 +11,7 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="gKRpZkgn"></script>
 
-<header id="toolbar" class="floating-menu">
-  <!-- Add content for the floating toolbar -->
+<header id="toolbar">
   <nav id="menu">
     <ul>
       <li><a href="#about">About Me</a></li>
@@ -141,21 +140,19 @@
     var menuTop = menu.offset().top;
 
     $(document).scroll(function() {
-      toolbar.toggleClass("floating", $(this).scrollTop() > menuTop);
+      toolbar.toggleClass("fixed", $(this).scrollTop() > menuTop);
     });
 
-    // Click event for menu items
-    $("#menu a").click(function(e){
+    // Smooth scrolling for menu links
+    menu.find("a").on('click', function(e) {
       e.preventDefault();
-      var target = $(this).attr('href');
-      $(".section").hide(); // Hide all sections
-      $(target).show(); // Show only the target section
+      var target = $(this.hash);
       $('html, body').animate({
-        scrollTop: $(target).offset().top - toolbar.height() // Scroll to the section and consider the toolbar height
-      }, 500);
+        scrollTop: target.offset().top - toolbar.height()
+      }, 1000);
     });
   });
-
 </script>
+
 </body>
 </html>
