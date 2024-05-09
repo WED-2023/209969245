@@ -11,7 +11,8 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="gKRpZkgn"></script>
 
-<header id="toolbar">
+<header id="toolbar" class="floating-menu">
+  <!-- Add content for the floating toolbar -->
   <nav id="menu">
     <ul>
       <li><a href="#about">About Me</a></li>
@@ -130,29 +131,25 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-  $(document).ready(function(){
-    // Hide all sections except the first one initially
-    $(".section:not(:first)").hide();
+$(document).ready(function(){
+  // Floating toolbar
+  var toolbar = $("#toolbar");
+  var menu = $("#menu");
+  var menuTop = menu.offset().top;
 
-    // Floating toolbar
-    var toolbar = $("#toolbar");
-    var menu = $("#menu");
-    var menuTop = menu.offset().top;
-
-    $(document).scroll(function() {
-      toolbar.toggleClass("fixed", $(this).scrollTop() > menuTop);
-    });
-
-    // Smooth scrolling for menu links
-    menu.find("a").on('click', function(e) {
-      e.preventDefault();
-      var target = $(this.hash);
-      $('html, body').animate({
-        scrollTop: target.offset().top - toolbar.height()
-      }, 1000);
-    });
+  $(document).scroll(function() {
+    toolbar.toggleClass("floating", $(this).scrollTop() > menuTop);
   });
-</script>
 
+  // Click event for menu items
+  $("#menu a").on('click', function(e){
+    e.preventDefault();
+    var target = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(target).offset().top - toolbar.height()
+    }, 500);
+  });
+});
+</script>
 </body>
 </html>
