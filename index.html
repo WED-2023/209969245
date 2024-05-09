@@ -1,193 +1,175 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 <div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR Code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
+  <li><a href="#about">About Me</a></li>
+  <li><a href="#photos">My Photos</a></li>
+  <li><a href="#playlist">My Playlist</a></li>
+  <li><a href="#like">Like</a></li>
+  <li><a href="#qrcoder">QR code</a></li>
+  <li><a href="#qa">Q&A</a></li>
+  <li><a href="#contact">Contact Me</a></li>
 </div>
-		  
+
 <section id="about" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
+  <!-- About Me Section -->
 </section>
 
 <section id="photos" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
+  <!-- My Photos Section -->
 </section>
 
 <section id="playlist" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
-<br/>
+  <!-- My Playlist Section -->
 </section>
 
 <section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
+  <!-- Like Section -->
 </section>
 
 <section id="qrcoder" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
-<br/>
-<br/>
+  <!-- QR Code Section -->
 </section>
 
-<section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
+<section id="qa" class="section">
+  <!-- Q&A Section -->
 </section>
 
 <section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
+  <!-- Contact Me Section -->
 </section>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(document).scroll(function() {
+      $('#menu').toggle($(this).scrollTop() > 1000);
+    });
 
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
+    $("#menu a").click(function(e){
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top
+      }, 500);
+    });
   });
-});
 </script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
 </body>
 </html>
+
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <!-- Brief description of the adult -->
+</section>
+
+<section id="photos" class="section">
+  <h2>My Photos</h2>
+  <!-- Various photos of the adult -->
+</section>
+
+<section id="playlist" class="section">
+  <h2>My Playlist</h2>
+  <!-- Add a playlist or a video -->
+</section>
+
+<section id="like" class="section">
+  <h2>Like</h2>
+  <!-- Add a "like" button -->
+</section>
+
+<section id="qrcoder" class="section">
+  <h2>QR Code</h2>
+  <!-- Add QR code -->
+</section>
+
+<section id="qa" class="section">
+  <h2>Q&A</h2>
+  <!-- Add Q&A content -->
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Me</h2>
+  <!-- Add contact form -->
+</section>
+
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>A brief description of the adult - history, resume, hobbies, areas of interest, a character who influenced him/her during his/her life, etc.</p>
+</section>
+
+<section id="photos" class="section">
+  <h2>My Photos</h2>
+  <!-- Various photos of the adult -->
+</section>
+
+<section id="playlist" class="section">
+  <h2>My Playlist</h2>
+  <!-- Add a playlist or a video -->
+</section>
+
+<section id="like" class="section">
+  <h2>Like</h2>
+  <!-- Add a "like" button -->
+</section>
+
+<section id="qrcoder" class="section">
+  <h2>QR Code</h2>
+  <!-- Add QR code -->
+</section>
+
+<section id="qa" class="section">
+  <h2>Q&A</h2>
+  <!-- Add Q&A content -->
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Me</h2>
+  <!-- Add contact form -->
+</section>
+
+<section id="photos" class="section">
+  <h2>My Photos</h2>
+  <img src="photo1.jpg" alt="Photo 1">
+  <img src="photo2.jpg" alt="Photo 2">
+  <!-- Add more photos as needed -->
+</section>
+
+<section id="playlist" class="section">
+  <h2>My Playlist</h2>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<section id="like" class="section">
+  <h2>Like</h2>
+  <div class="fb-like" data-href="YOUR_PAGE_URL" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+</section>
+
+<section id="qrcoder" class="section">
+  <h2>QR Code</h2>
+  <img src="qr_code.png" alt="QR Code">
+</section>
+
+<section id="qa" class="section">
+  <h2>Q&A</h2>
+  <p>a. List three main differences between web1, web2 and web3...</p>
+  <p>b. Explain the differences stated in question 1 by an example of a use case...</p>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Me</h2>
+  <form action="mailto:your_email@example.com" method="post" enctype="text/plain">
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+    <label for="smiley">Select a smiley:</label>
+    <select id="smiley" name="smiley">
+      <option value=":)">:)</option>
+      <option value=":D">:D</option>
+      <option value=":(">:(</option>
+    </select><br>
+    <input type="submit" value="Send">
+  </form>
+</section>
+
