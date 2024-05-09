@@ -172,3 +172,17 @@ textarea, select, input[type="submit"] {
   align-items: center;
   height: 300px; /* Adjust as needed */
 }
+
+/* Floating menu styles */
+.floating-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it appears above other content */
+  transition: top 0.3s; /* Add smooth transition effect */
+}
+
+.floating-menu:not(.floating) {
+  top: -100px; /* Hide the menu off-screen initially */
+}
