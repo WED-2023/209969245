@@ -1,32 +1,39 @@
 /* Reset CSS */
-body, h1, h2, h3, p, ul, li {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* General styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   line-height: 1.6;
+  background-color: #f0f0f0;
+  color: #333;
 }
 
 /* Header styles */
 #toolbar {
-  background-color: lightblue;
+  background-color: #ff6f61;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #menu ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100%;
+  padding: 10px 0;
 }
 
 #menu li {
-  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+#menu li:hover {
+  transform: scale(1.1);
 }
 
 #menu a {
@@ -43,135 +50,30 @@ body {
 
 /* Main content styles */
 main {
-  padding-top: 50px; /* Adjust for fixed header */
+  padding-top: 60px; /* Adjust for fixed header */
 }
 
 .section {
   margin: 50px auto;
   max-width: 800px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .section h2 {
-  font-size: 24px;
+  font-size: 28px;
+  color: #ff6f61;
   margin-bottom: 20px;
 }
 
 .section p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Form styles */
-form {
-  margin-top: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-textarea, select, input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  #menu ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #menu li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-}
-
-/* Q&A section styles */
-.qa-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.qa-item {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.qa-heading {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.qa-subheading {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.qa-list {
-  list-style: none;
-}
-
-.qa-difference {
-  margin-bottom: 10px;
-}
-
-.qa-difference strong {
-  font-weight: bold;
-}
-
-.qa-details {
-  margin-top: 5px;
-}
-
-.qa-example {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* Additional styles for enhanced visuals */
-.photo-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.video-container {
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.social-like {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px; /* Adjust as needed */
-}
-
-.qr-code {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px; /* Adjust as needed */
-}
+/* ... other styles ... */
 
 /* Floating menu styles */
 .floating-menu {
@@ -179,10 +81,36 @@ textarea, select, input[type="submit"] {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Ensure it appears above other content */
-  transition: top 0.3s; /* Add smooth transition effect */
+  z-index: 1000;
+  background-color: rgba(255, 111, 97, 0.95);
+  transition: top 0.3s;
 }
 
 .floating-menu:not(.floating) {
-  top: -100px; /* Hide the menu off-screen initially */
+  top: -100px;
 }
+
+/* Add a colorful gradient to the background */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+/* Enhance photo gallery with hover effects */
+.photo-gallery img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ... more styles ... */
