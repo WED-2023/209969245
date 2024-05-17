@@ -12,17 +12,6 @@
       color: #333;
     }
     
-    header {
-      background-color: #ff6f61;
-      color: white;
-      padding: 10px 0;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      z-index: 1000;
-      top: 0;
-    }
-    
     #menu ul {
       list-style: none;
       padding: 0;
@@ -34,14 +23,7 @@
     #menu li {
       margin: 0 15px;
     }
-    
-    #menu a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    
+        
     #menu a:hover {
       color: #333;
     }
@@ -54,13 +36,13 @@
       padding: 40px 20px;
       margin: 40px auto;
       max-width: 800px;
-      background-color: #f9f9f9;
+      background-color: #ff9292;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     
     .section-title {
-      color: #ff6f61;
+      color: #ff0000;
       margin-bottom: 20px;
     }
     
@@ -69,23 +51,6 @@
       line-height: 1.6;
     }
     
-    .photo-gallery {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    
-    .photo-gallery img {
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-    
-    .photo-gallery img:hover {
-      transform: scale(1.05);
-    }
     
     .video-container {
       position: relative;
@@ -119,7 +84,7 @@
     }
     
     .qa-heading {
-      color: #ff6f61;
+      color: #ff0000;
       margin-bottom: 10px;
     }
     
@@ -157,183 +122,203 @@
     textarea {
       width: 100%;
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #000000;
       border-radius: 5px;
       margin-bottom: 10px;
     }
-    
-    select, input[type="submit"] {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-    
-    .floating-menu {
-      background-color: rgba(255, 111, 97, 0.95);
-      display: none; /* Initially hide floating menu */
-      transition: top 0.3s;
-    }
-    
-    .floating-menu.show {
-      display: block; /* Show floating menu when needed */
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-    }
+            
   </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- for the slider (swiper) -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
+
   
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="gKRpZkgn"></script>
 
-<header id="toolbar" class="floating-menu">
-  <!-- Add content for the floating toolbar -->
-  <nav id="menu">
-    <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#photos">My Photos</a></li>
-      <li><a href="#playlist">My Playlist</a></li>
-      <li><a href="#like">Like</a></li>
-      <li><a href="#qrcoder">QR code</a></li>
-      <li><a href="#qa">Q&A</a></li>
-      <li><a href="#contact">Contact Me</a></li>
-    </ul>
-  </nav>
-</header>
+  <header id="toolbar" class="floating-menu">
+    <!-- Add content for the floating toolbar -->
+    <nav id="menu">
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#photos">My Photos</a></li>
+        <li><a href="#playlist">My Playlist</a></li>
+        <li><a href="#like">Like</a></li>
+        <li><a href="#qrcoder">QR code</a></li>
+        <li><a href="#qa">Q&A</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-  <section id="about" class="section">
-    <h2 class="section-title">About Me</h2>
-    <p class="section-description">A brief description of myself - history, resume, hobbies, areas of interest, a character who influenced me during my life, etc.</p>
-  </section>
+  <main>
+    <section id="about" class="section">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-description">A brief description of myself - history, resume, hobbies, areas of interest, a character who influenced me during my life, etc.</p>
+    </section>
 
-  <section id="photos" class="section">
-    <h2 class="section-title">My Photos</h2>
-    <div class="photo-gallery">
-      <img src="photo1.jpg" alt="Photo 1">
-      <img src="photo2.jpg" alt="Photo 2">
-      <!-- Add more photos as needed -->
-    </div>
-  </section>
+    <section id="photos" class="section">
+      <h2 class="section-title">My Photos</h2>
+      <div id="swiper-container" class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="flower1.jpg" alt="Photo 1"></div>
+          <div class="swiper-slide"><img src="flower2.jpg" alt="Photo 2"></div>
+          <div class="swiper-slide"><img src="flower3.jpg" alt="Photo 3"></div>
+          <!-- Add more slides as needed -->
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    
 
-  <section id="playlist" class="section">
-    <h2 class="section-title">My Playlist</h2>
-    <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
+    <section id="playlist" class="section">
+      <h2 class="section-title">My Playlist</h2>
+      <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PbT7UOQLz7c?si=PuuNZ2s1kJ-8rFHC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+    
+    
 
-  <section id="like" class="section">
-    <h2 class="section-title">Like</h2>
-    <div class="social-like">
-      <!-- Add like button code here -->
-      <div class="fb-like" data-href="https://wed-2023.github.io/209969245/" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
-    </div>
-  </section>
+    <section id="like" class="section">
+      <h2 class="section-title">Like</h2>
+      <div class="social-like">
+        <!-- Add like button code here -->
 
-  <section id="qrcoder" class="section">
-    <h2 class="section-title">QR Code</h2>
-    <div class="qr-code">
-      <img src="qr_code.png" alt="QR Code">
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section id="qa" class="section">
-    <h2 class="section-title">Q&A</h2>
+    <section id="qrcoder" class="section">
+      <h2 class="section-title">QR Code</h2>
+      <div class="qr-code">
+        <img src="qr-picture.PNG" alt="QR Code">
+      </div>
+    </section>
 
-    <div class="qa-container">
-      <div class="qa-item">
-        <h3 class="qa-heading">Web Development Evolution</h3>
-        <div class="qa-content">
-          <h4 class="qa-subheading">3 Main Differences Between Web 1.0, Web 2.0, and Web 3.0</h4>
-          <ul class="qa-list">
-            <li class="qa-difference">
-              <strong>Web 1.0:</strong>
-              <ul class="qa-details">
-                <li>Static content</li>
-                <li>Information consumption</li>
-                <li>Centralized control</li>
-              </ul>
-            </li>
-            <li class="qa-difference">
-              <strong>Web 2.0:</strong>
-              <ul class="qa-details">
-                <li>Dynamic content</li>
-                <li>User participation</li>
-                <li>Decentralization</li>
-              </ul>
-            </li>
-            <li class="qa-difference">
-              <strong>Web 3.0:</strong>
-              <ul class="qa-details">
-                <li>Decentralized infrastructure</li>
-                <li>Data ownership and privacy</li>
-                <li>Semantic web</li>
-              </ul>
-            </li>
-          </ul>
+    <section id="qa" class="section">
+      <h2 class="section-title">Q&A</h2>
+
+      <div class="qa-container">
+        <div class="qa-item">
+          <h3 class="qa-heading">Web Development Evolution</h3>
+          <div class="qa-content">
+            <h4 class="qa-subheading">3 Main Differences Between Web 1.0, Web 2.0, and Web 3.0</h4>
+            <ul class="qa-list">
+              <li class="qa-difference">
+                <strong>Web 1.0:</strong>
+                <ul class="qa-details">
+                  <li>Static content</li>
+                  <li>Information consumption</li>
+                  <li>Centralized control</li>
+                </ul>
+              </li>
+              <li class="qa-difference">
+                <strong>Web 2.0:</strong>
+                <ul class="qa-details">
+                  <li>Dynamic content</li>
+                  <li>User participation</li>
+                  <li>Decentralization</li>
+                </ul>
+              </li>
+              <li class="qa-difference">
+                <strong>Web 3.0:</strong>
+                <ul class="qa-details">
+                  <li>Decentralized infrastructure</li>
+                  <li>Data ownership and privacy</li>
+                  <li>Semantic web</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <h3 class="qa-heading">Use Case Example: Travel Planning</h3>
+          <div class="qa-content">
+            <p class="qa-example">
+              <em>Web 1.0:</em> Searching for travel destinations on Web 1.0 would yield static web pages with basic information about popular tourist spots, accommodation options, and travel agencies. Users would have limited interactivity and could only passively consume information.<br>
+              <em>Web 2.0:</em> In Web 2.0, users can engage in collaborative travel planning through platforms like TripAdvisor or Airbnb. Users can share reviews, recommendations, and personal experiences, contributing to a dynamic and interactive travel community. They have the ability to interact with content, share their opinions, and participate actively in the travel planning process.<br>
+              <em>Web 3.0:</em> With Web 3.0, decentralized travel platforms powered by blockchain technology could revolutionize the industry. Users could access decentralized marketplaces for booking accommodations and activities, with transparent pricing and reviews stored securely on the blockchain. Smart contracts could automate transactions, ensuring trust and security in peer-to-peer interactions. Additionally, personalized travel recommendations based on user preferences and past travel history could be provided, while ensuring user control over their data and privacy.
+            </p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="qa-item">
-        <h3 class="qa-heading">Use Case Example: Travel Planning</h3>
-        <div class="qa-content">
-          <p class="qa-example">
-            <em>Web 1.0:</em> Searching for travel destinations on Web 1.0 would yield static web pages with basic information about popular tourist spots, accommodation options, and travel agencies. Users would have limited interactivity and could only passively consume information.<br>
-            <em>Web 2.0:</em> In Web 2.0, users can engage in collaborative travel planning through platforms like TripAdvisor or Airbnb. Users can share reviews, recommendations, and personal experiences, contributing to a dynamic and interactive travel community. They have the ability to interact with content, share their opinions, and participate actively in the travel planning process.<br>
-            <em>Web 3.0:</em> With Web 3.0, decentralized travel platforms powered by blockchain technology could revolutionize the industry. Users could access decentralized marketplaces for booking accommodations and activities, with transparent pricing and reviews stored securely on the blockchain. Smart contracts could automate transactions, ensuring trust and security in peer-to-peer interactions. Additionally, personalized travel recommendations based on user preferences and past travel history could be provided, while ensuring user control over their data and privacy.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section id="contact" class="section">
+      <h2 class="section-title">Contact Me</h2>
+      <form action="mailto:noamshani1@gmail.com" method="post" enctype="text/plain">
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <label for="smiley">Select a smiley:</label>
+        <select id="smiley" name="smiley">
+          <option value=":)">:)</option>
+          <option value=":D">:D</option>
+          <option value=":(">:(</option>
+        </select><br> <br>
+        <input type="submit" value="Send">
+      </form>
+    </section>
+  </main>
 
-  <section id="contact" class="section">
-    <h2 class="section-title">Contact Me</h2>
-    <form action="mailto:your_email@example.com" method="post" enctype="text/plain">
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
-      <label for="smiley">Select a smiley:</label>
-      <select id="smiley" name="smiley">
-        <option value=":)">:)</option>
-        <option value=":D">:D</option>
-        <option value=":(">:(</option>
-      </select><br>
-      <input type="submit" value="Send">
-    </form>
-  </section>
-</main>
+  <script>
+    $(document).ready(function(){
+      // Floating toolbar
+      var toolbar = $("#toolbar");
+      var menu = $("#menu");
+      var menuTop = menu.offset().top;
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      $(document).scroll(function() {
+        if ($(this).scrollTop() > menuTop) {
+          toolbar.addClass("show");
+        } else {
+          toolbar.removeClass("show");
+        }
+      });
+
+      // Click event for menu items
+      $("#menu a").click(function(e){
+        e.preventDefault();
+        var target = $(this).attr('href');
+        $("html, body").animate({
+          scrollTop: $(target).offset().top - toolbar.height() 
+        }, 500);
+      });
+    });
+
+  </script>
+
+<!-- for the slider (swiper)-->
 <script>
-  $(document).ready(function(){
-    // Floating toolbar
-    var toolbar = $("#toolbar");
-    var menu = $("#menu");
-    var menuTop = menu.offset().top;
-
-    $(document).scroll(function() {
-      if ($(this).scrollTop() > menuTop) {
-        toolbar.addClass("show");
-      } else {
-        toolbar.removeClass("show");
-      }
-    });
-
-    // Click event for menu items
-    $("#menu a").click(function(e){
-      e.preventDefault();
-      var target = $(this).attr('href');
-      $("html, body").animate({
-        scrollTop: $(target).offset().top - toolbar.height() // Scroll to the section and consider the toolbar height
-      }, 500);
-    });
+  var swiper = new Swiper('#swiper-container', {
+    // Optional parameters
+    loop: true,
+    autoplay: {
+      delay: 5000, // Autoplay delay in milliseconds
+    },
+    slidesPerView: 1, // Show only one slide at a time
+    spaceBetween: 0, // Eliminate spacing between slides
+    // If you need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
-
 </script>
+
+
+
 </body>
 </html>
