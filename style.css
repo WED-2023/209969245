@@ -93,12 +93,58 @@ main {
   gap: 30px;
 }
 
-#swiper-container .swiper-slide img {
-  width: 100%; 
-  height: 100%; 
-  max-height: 200px; 
-  object-fit: cover; 
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.swiper-button-prev {
+  left: 10px; /* Adjust horizontal position for previous button */
+}
+
+.swiper-button-next {
+  right: 10px; /* Adjust horizontal position for next button */
+}
+
+
+
+
+
+
 
 .swiper-slide {
   margin-right: 10px; 
