@@ -7,7 +7,7 @@
 
 /* General styles */
 body {
-  background-image: url('flower6.png');
+  background-image: url('purple.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; /* Ensure the background image stays fixed while scrolling */
@@ -71,8 +71,8 @@ main {
 }
 
 .section-title {
-  color: #ff6f61;
-  margin-bottom: 30px;
+  color: #ff0000;
+  margin-bottom: 20px;
   font-size: 36px;
   font-weight: 700;
   text-align: center;
@@ -80,10 +80,10 @@ main {
 }
 
 .section-description {
-  font-size: 20px;
-  line-height: 1.8;
-  text-align: center;
-  margin-bottom: 40px;
+  font-size: 30px;
+  text-align: right;
+  margin-bottom: 20px;
+  color: #ff0000;
 }
 
 .photo-gallery {
@@ -109,6 +109,7 @@ main {
   width: 100%;
   height: 100%;
 }
+
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -140,22 +141,26 @@ main {
   right: 10px; /* Adjust horizontal position for next button */
 }
 
-
-
-
-
-
-
 .swiper-slide {
   margin-right: 10px; 
 }
 
-
-
 #swiper-container {
   width: 300px; /* Adjust the width as needed */
-  height: 200px; /* Adjust the height as needed */
+  height: 300px; /* Adjust the height as needed */
   margin: 0 auto; /* Center the slider horizontally */
+}
+
+.swiper-slide.cruze-pics {
+  margin-right: 160px; /* Adjust the value as needed for desired spacing */
+}
+
+.swiper-slide.dancing {
+  margin-right: 70px; /* Adjust the value as needed for desired spacing */
+}
+
+.swiper-slide.last-pic {
+  margin-right: -20px; /* Adjust the value as needed for desired spacing */
 }
 
 
@@ -202,11 +207,11 @@ main {
 }
 
 .qa-item {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .qa-heading {
-  color: #ff6f61;
+  color: #ff0000;
   margin-bottom: 20px;
   font-size: 28px;
   font-weight: 700;
@@ -218,6 +223,7 @@ main {
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 600;
+  color: purple;
 }
 
 .qa-list {
@@ -234,16 +240,7 @@ main {
   margin-bottom: 20px;
 }
 
-.qa-example {
-  font-style: italic;
-  line-height: 1.8;
-  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+
 
 form {
   margin-top: 40px;
@@ -334,22 +331,6 @@ input[type="submit"]:hover {
       padding: 40px 20px;
   }
 
-  .section-title {
-      font-size: 28px;
-  }
-
-  .section-description {
-      font-size: 18px;
-  }
-
-  .qa-heading {
-      font-size: 24px;
-  }
-
-  .qa-subheading {
-      font-size: 18px;
-  }
-
   .qa-details {
       font-size: 16px;
   }
@@ -368,7 +349,6 @@ input[type="submit"]:hover {
 #toolbar,
 #menu a::before,
 .photo-gallery img:hover,
-.qa-example,
 input[type="submit"],
 .floating-menu {
   animation: rainbow 5s linear infinite;

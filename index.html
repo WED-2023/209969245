@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v19.0" nonce="wtmCCNAw"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <title>Grandma's Website</title>
+  <title>Tzipi's Website</title>
   <style>
     /* Add additional styles here if needed */
     body {
       font-family: 'Arial', sans-serif;
       color: #333;
     }
-    
+
     #menu ul {
       list-style: none;
       padding: 0;
@@ -19,19 +22,19 @@
       display: flex;
       justify-content: center;
     }
-    
+
     #menu li {
       margin: 0 15px;
     }
-        
+
     #menu a:hover {
       color: #333;
     }
-    
+
     main {
       padding-top: 60px;
     }
-    
+
     .section {
       padding: 40px 20px;
       margin: 40px auto;
@@ -39,25 +42,15 @@
       background-color: #ff9292;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: purple;
     }
-    
-    .section-title {
-      color: #ff0000;
-      margin-bottom: 20px;
-    }
-    
-    .section-description {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-    
-    
+
     .video-container {
       position: relative;
       overflow: hidden;
       padding-top: 56.25%;
     }
-    
+
     .video-container iframe {
       position: absolute;
       top: 0;
@@ -65,60 +58,42 @@
       width: 100%;
       height: 100%;
     }
-    
+
     .social-like {
       display: flex;
       justify-content: center;
     }
-    
+
     .qr-code {
       text-align: center;
     }
-    
+
     .qa-container {
       margin-top: 20px;
     }
-    
-    .qa-item {
-      margin-bottom: 20px;
-    }
-    
-    .qa-heading {
-      color: #ff0000;
-      margin-bottom: 10px;
-    }
-    
-    .qa-subheading {
-      margin-bottom: 10px;
-    }
-    
+
     .qa-list {
       list-style: none;
       padding-left: 20px;
     }
-    
+
     .qa-details {
       margin-top: 5px;
     }
-    
+
     .qa-difference {
       margin-bottom: 10px;
     }
-    
-    .qa-example {
-      font-style: italic;
-      line-height: 1.6;
-    }
-    
+
     form {
       margin-top: 20px;
     }
-    
+
     label {
       display: block;
       margin-bottom: 5px;
     }
-    
+
     textarea {
       width: 100%;
       padding: 10px;
@@ -126,19 +101,18 @@
       border-radius: 5px;
       margin-bottom: 10px;
     }
-            
   </style>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- for the slider (swiper) -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- for the slider (swiper) -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
 <body>
 
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="RANA7Wkn"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v19.0" nonce="wtmCCNAw"></script>
 
   <header id="toolbar" class="floating-menu">
     <!-- Add content for the floating toolbar -->
@@ -156,10 +130,21 @@
   </header>
 
   <main>
-    <section id="about" class="section">
-      <h2 class="section-title">About Me</h2>
-      <p class="section-description">A brief description of myself - history, resume, hobbies, areas of interest, a character who influenced me during my life, etc.</p>
+    <section id="about" class="section" dir="rtl">
+      <h2 class="section-title">About Me - Tzipi Adler</h2>
+      <h3 class="section-description">סיפור חיי</h3>
+      <p>שמי ציפי, או בשם הולדתי צ'יצ'יליה. נולדתי בשנת 1950 בעיר פוקשני שברומניה, בת יחידה, תחת השלטון הקומוניסטי לאחר מלחמת העולם השנייה.</p>
+      <p>במהלך ילדותי ברומניה, הוריי דאגו שלא אחוש באף מחסור, למרות הקשיים הכלכליים והפחד הרב מהשלטון. בילדותי, לקחתי חלק מתנועת הנוער הקומוניסטית "פיונירים" למרות הגילויים האנטישמיים, והייתי מצטיינת בלימודים.</p>
+      <p>בגיל 14 וחצי עליתי לארץ עם משפחתי, וגרתי בקריית אתא. בהתחלה חוויתי קשיים רבים בבית הספר, בגלל חוסר ידיעת השפה העברית, אך בסופו של דבר סיימתי את לימודי התיכון בהצלחה. בזמן מלחמת ששת הימים, בשל העובדה שהיו לי אופניים, גויסתי לתפקיד פיקוח על קיום ההאפלה בעיר, כלומר דאגתי שכל הבתים יהיו ללא אורות דלוקים.</p>
+      <p>בשירותי הצבאי שובצתי לקורס "פקידות אפסנאיות", אך לבסוף, לאחר הטירונות, שירתי בתפקיד של מש"קית סעד (מש"קית ת"ש) בבסיס של חיל התובלה. באחד מימי השישי בשירותי הצבאי, אף על פי שהייתה כוננות בבסיס, בחרתי "לברוח" מהבסיס יחד עם חברותיי ונקלעתי באופן מקרי לטרמפ בו נסע ראובן, בעלי לעתיד. בצורה קומית, ראובן נישק את הכובע שלי אשר שכחתי במכונית וכך הכרנו. לאחר זמן קצר ראובן ביקש את מספר הטלפון שלי, דבר שגרם לנו להפגש, ומכאן הכל הסטוריה. חצי שנה לאחר מכן נישאנו, ונולדו לנו שלושה ילדים - רויטל, נגה ואושרי.</p>
+      <p> את לימודיי ביצעתי בטכניון, שם סיימתי תואר הנדסאית בכימיה ועבדתי בתחום מספר שנים. לאחר זמן מה ביצעתי הסבה לתחום המחשבים, ועסקתי בתחום זהבשארית חיי עד הפנסיה. במהלך השנים עבדתי באלבית, בבטכניון ובמספר סטארטפים.</p>
+      <p>כיום אני סבתא גאה לשבעה נכדים מקסימים: נועם, עדן, ליעד, קרן, אורן, דקל ושקד. </p>
+      <br>
+      <h3 class="section-description">עוד קצת עלי</h3>
+      <p>אני אוהבת לרקוד ריקודי עם, לשחק משחקי קופסה ומשחקי חשיבה, לקרוא ספרים, ולטייל בארץ ובעולם.</p>     
+      <p>אדם שהיווה כדמות להערצה עבורי היה צביקה פיק, כך שהמוסיקה שלו השפיעה עלי רבות והייתה חלק משמעותי מאוד בחיי.</p>
     </section>
+    
 
     <section id="photos" class="section">
       <h2 class="section-title">My Photos</h2>
@@ -167,13 +152,17 @@
         <div id="swiper-container" class="swiper-container">
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><img src="flower1.jpg" alt="Photo 1"></div>
-            <div class="swiper-slide"><img src="flower2.jpg" alt="Photo 2"></div>
-            <div class="swiper-slide"><img src="flower3.jpg" alt="Photo 3"></div>
-            <div class="swiper-slide"><img src="flower4.jpg" alt="Photo 4"></div>
-            <div class="swiper-slide"><img src="flower5.jpg" alt="Photo 5"></div>
-            <div class="swiper-slide"><img src="flower6.png" alt="Photo 6"></div>
-            <!-- Add more slides as needed -->
+            <div class="swiper-slide"><img src="little1.jpeg" alt="Photo 1"></div>
+            <div class="swiper-slide"><img src="little2.jpeg" alt="Photo 2"></div>
+            <div class="swiper-slide"><img src="young.jpeg" alt="Photo 3"></div>
+            <div class="swiper-slide"><img src="idf1.jpeg" alt="Photo 4"></div>
+            <div class="swiper-slide"><img src="idf2.jpeg" alt="Photo 5"></div>
+            <div class="swiper-slide cruze-pics"><img src="cruze1.jpeg" alt="Photo 6" style="width: 150%;"></div>
+            <div class="swiper-slide cruze-pics"><img src="cruze2.jpeg" alt="Photo 7" style="width: 150%;"></div>
+            <div class="swiper-slide dancing"><img src="dancing.jpeg" alt="Photo 8" style="width: 120%;"></div>
+            <div class="swiper-slide"><img src="family1.jpg" alt="Photo 9"></div>
+            <div class="swiper-slide"><img src="family2.jpeg" alt="Photo 10"></div>
+            <div class="swiper-slide last-pic"><img src="family3.jpeg" alt="Photo 11" style="width: 90%;"></div>
           </div>
           <!-- Pagination -->
           <div class="swiper-pagination"></div>
@@ -184,27 +173,19 @@
         </div>
       </div>
     </section>
-    
-    
-
 
     <section id="playlist" class="section">
       <h2 class="section-title">My Playlist</h2>
       <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/TWlKSUhzbRQ?si=nnPTG5v73OhKZwmC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/K1dxmLpbDYU?si=oW7AK1jRaW4CrUFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
-    
-    
 
     <section id="like" class="section">
       <h2 class="section-title">Like</h2>
-      <div class="social-like">
-        <!-- Add like button code here -->
-        <div class="fb-like" data-href="https://wed-2023.github.io/209969245/" data-width="" data-layout
-        ="button_count" data-action="like" data-size="large" data-share="true"></div>
-
-      </div>
-    </section>
+      <!--Like button code here-->
+      <div class="fb-like" data-href="https://wed-2023.github.io/209969245/" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
+   </section>
 
     <section id="qrcoder" class="section">
       <h2 class="section-title">QR Code</h2>
@@ -216,68 +197,80 @@
     <section id="qa" class="section">
       <h2 class="section-title">Q&A</h2>
 
-      <div class="qa-container">
+      <div class="qa-container" dir="rtl">
         <div class="qa-item">
           <h3 class="qa-heading">Web Development Evolution</h3>
           <div class="qa-content">
-            <h4 class="qa-subheading">3 Main Differences Between Web 1.0, Web 2.0, and Web 3.0</h4>
-            <ul class="qa-list">
-              <li class="qa-difference">
-                <strong>Web 1.0:</strong>
-                <ul class="qa-details">
-                  <li>Static content</li>
-                  <li>Information consumption</li>
-                  <li>Centralized control</li>
-                </ul>
-              </li>
-              <li class="qa-difference">
-                <strong>Web 2.0:</strong>
-                <ul class="qa-details">
-                  <li>Dynamic content</li>
-                  <li>User participation</li>
-                  <li>Decentralization</li>
-                </ul>
-              </li>
-              <li class="qa-difference">
-                <strong>Web 3.0:</strong>
-                <ul class="qa-details">
-                  <li>Decentralized infrastructure</li>
-                  <li>Data ownership and privacy</li>
-                  <li>Semantic web</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="qa-item">
-          <h3 class="qa-heading">Use Case Example: Travel Planning</h3>
-          <div class="qa-content">
-            <p class="qa-example">
-              <em>Web 1.0:</em> Searching for travel destinations on Web 1.0 would yield static web pages with basic information about popular tourist spots, accommodation options, and travel agencies. Users would have limited interactivity and could only passively consume information.<br>
-              <em>Web 2.0:</em> In Web 2.0, users can engage in collaborative travel planning through platforms like TripAdvisor or Airbnb. Users can share reviews, recommendations, and personal experiences, contributing to a dynamic and interactive travel community. They have the ability to interact with content, share their opinions, and participate actively in the travel planning process.<br>
-              <em>Web 3.0:</em> With Web 3.0, decentralized travel platforms powered by blockchain technology could revolutionize the industry. Users could access decentralized marketplaces for booking accommodations and activities, with transparent pricing and reviews stored securely on the blockchain. Smart contracts could automate transactions, ensuring trust and security in peer-to-peer interactions. Additionally, personalized travel recommendations based on user preferences and past travel history could be provided, while ensuring user control over their data and privacy.
-            </p>
+            <h4 class="qa-subheading">3 ההבדלים העיקריים בין Web 1.0, Web 2.0 ו-Web 3.0:</h4>
+            <ol>
+              <li><b><u>אינטראקטיביות:</u></b> Web 1.0 הייתה סטטית וחד-כיוונית, כלומר המשתמשים יכלו רק לצרוך תוכן. Web 2.0 הפכה את הרשת לאינטראקטיבית, עם יכולת של המשתמשים ליצור ולשתף תוכן. Web 3.0 מבוססת על טכנולוגיית בלוקצ'יין ומאפשרת אינטראקציה מרובה יותר ושיתוף משאבים דיגיטליים.</li>
+              <li><b><u>מרכזיות:</u></b> Web 1.0 ו-Web 2.0 היו מרוכזות, כלומר התוכן והשירותים הוספקו על ידי ספקים מרכזיים. Web 3.0 היא מבוזרת ומאפשרת שיתוף משאבים ללא ישות מרכזית.</li>
+              <li><b><u>דרכי תשלום:</u></b> Web 1.0 ו-Web 2.0 היו בעיקר מבוססות על כלכלה של פרסום. Web 3.0 מבוססת על קריפטוגרפיה וכלכלה צמודה בה המשתמשים יכולים לשלם ולקבל תשלומים באמצעות מטבעות קריפטוגרפיים.</li>
+            </ol>
+            <p>בקצרה, Web 3.0 היא יותר אינטראקטיבית, מבוזרת ומתבססת על טכנולוגיות חדשות כמו בלוקצ'יין, בהשוואה לדורות הרשת הקודמים.</p>
           </div>
         </div>
       </div>
+      
+
+
+
+
+      <div class="qa-item">
+        <h3 class="qa-heading">Use Case Example: Travel Planning</h3>
+        <div class="qa-content">
+          <p class="qa-example">
+            <em style="color: purple;"> <b> <u>Web 1.0:</u> </b> </em> <span style="color: purple;">Searching for travel destinations on Web 1.0 would yield static web pages with basic information about popular tourist spots, accommodation options, and travel agencies. Users would have limited interactivity and could only passively consume information.</span><br>
+            <em style="color: purple"> <b> <u>Web 2.0:</u> </b> </em> <span style="color: purple;">In Web 2.0, users can engage in collaborative travel planning through platforms like TripAdvisor or Airbnb. Users can share reviews, recommendations, and personal experiences, contributing to a dynamic and interactive travel community. They have the ability to interact with content, share their opinions, and participate actively in the travel planning process.</span><br>
+            <em style="color: purple;"> <b> <u>Web 3.0:</u> </b> </em> <span style="color: purple;">With Web 3.0, decentralized travel platforms powered by blockchain technology could revolutionize the industry. Users could access decentralized marketplaces for booking accommodations and activities, with transparent pricing and reviews stored securely on the blockchain. Smart contracts could automate transactions, ensuring trust and security in peer-to-peer interactions. Additionally, personalized travel recommendations based on user preferences and past travel history could be provided, while ensuring user control over their data and privacy.</span>
+          </p>
+        </div>
+      </div>
+      
     </section>
 
     <section id="contact" class="section">
       <h2 class="section-title">Contact Me</h2>
-      <form action="mailto:noamshani1@gmail.com" method="post" enctype="text/plain">
+      <form id="contact-form" action="https://formspree.io/f/{your-formspree-email}" method="POST">
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="_replyto" required><br><br>
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
         <label for="smiley">Select a smiley:</label>
         <select id="smiley" name="smiley">
           <option value=":)">:)</option>
           <option value=":D">:D</option>
           <option value=":(">:(</option>
-        </select><br> <br>
+          <option value=":O">:O</option>
+          <option value=":|">:|</option>
+          <option value=";)">;)</option>
+          <option value=":}">:}</option>
+        </select><br><br>
         <input type="submit" value="Send">
       </form>
     </section>
   </main>
+
+  <script>
+    // Function to handle form submission
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get user input values
+      var userEmail = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+      var smiley = document.getElementById("smiley").value;
+
+      // Construct email body
+      var emailBody = message + "\n\n" + smiley + "\n\nMy email address: " + userEmail;
+
+      // Construct mailto URL with the destination email address
+      var mailtoURL = "mailto:noamshani1@gmail.com?subject=Contact%20Me%20Please&body=" + encodeURIComponent(emailBody);
+
+      // Open mail client with the mailto URL
+      window.location.href = mailtoURL;
+    });
+  </script>
 
   <script>
     $(document).ready(function(){
@@ -306,30 +299,27 @@
 
   </script>
 
-<!-- for the slider (swiper)-->
-<script>
-  var swiper = new Swiper('#swiper-container', {
-    // Optional parameters
-    loop: true,
-    autoplay: {
-      delay: 5000, // Autoplay delay in milliseconds
-    },
-    slidesPerView: 1, // Show only one slide at a time
-    spaceBetween: 0, // Eliminate spacing between slides
-    // If you need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-</script>
-
-
-
+  <!-- for the slider (swiper)-->
+  <script>
+    var swiper = new Swiper('#swiper-container', {
+      // Optional parameters
+      loop: true,
+      autoplay: {
+        delay: 5000, // Autoplay delay in milliseconds
+      },
+      slidesPerView: 1, // Show only one slide at a time
+      spaceBetween: 0, // Eliminate spacing between slides
+      // If you need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 </body>
 </html>
