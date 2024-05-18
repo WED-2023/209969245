@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=1216348612681687&autoLogAppEvents=1" nonce="xaokA8aS"></script>
+
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css" />
@@ -107,9 +111,7 @@
 
 </head>
 <body>
-  <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="OKbNNHtv"></script>
-  
+
   <header id="toolbar" class="floating-menu">
     <!-- Add content for the floating toolbar -->
     <nav id="menu">
@@ -179,9 +181,10 @@
 
     <section id="like" class="section">
       <h2 class="section-title">Like</h2>
-      <!--Like button code here-->
-      <div class="fb-like" data-href="https://wed-2023.github.io/209969245/" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
-   </section>
+      <div class="fb-like" data-href="https://wed-2023.github.io/209969245/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+    </section>
+    
+    
 
     <section id="qrcoder" class="section">
       <h2 class="section-title">QR Code</h2>
@@ -294,6 +297,22 @@
     });
 
   </script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var likeButton = document.getElementById("like-button");
+    var likeCount = document.getElementById("like-count");
+    var count = 0;
+
+    likeButton.addEventListener("click", function() {
+      count++;
+      likeCount.textContent = count;
+    });
+  });
+</script>
+
+
 
   <!-- for the slider (swiper)-->
   <script>
