@@ -18,6 +18,7 @@ A photo gallery displaying memorable moments from Tzipi's life, including childh
 I created the photo gallery by using a Swiper-based photo slider featuring various images with captions.
 
 **My Playlist:**
+
 Tzipi's favorite YouTube music video (dancing with my grandpa while one of her most favorite song is playing in the background) is embedded in this section, featuring a video player with her top song selections.
 
 **Like:** 
