@@ -50,6 +50,10 @@ body {
   padding-bottom: 5px;
 }
 
+#menu a:hover {
+  color: #333;
+}
+
 #menu a::before {
   content: '';
   position: absolute;
@@ -86,13 +90,6 @@ main {
   color: #ff0000;
 }
 
-.photo-gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
 .swiper-container {
   position: relative;
   width: 100%;
@@ -109,7 +106,6 @@ main {
   width: 100%;
   height: 100%;
 }
-
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -134,11 +130,11 @@ main {
 }
 
 .swiper-button-prev {
-  left: 10px; /* Adjust horizontal position for previous button */
+  left: 10px; 
 }
 
 .swiper-button-next {
-  right: 10px; /* Adjust horizontal position for next button */
+  right: 10px; 
 }
 
 .swiper-slide {
@@ -146,36 +142,23 @@ main {
 }
 
 #swiper-container {
-  width: 300px; /* Adjust the width as needed */
-  height: 300px; /* Adjust the height as needed */
-  margin: 0 auto; /* Center the slider horizontally */
+  width: 300px; 
+  height: 300px; 
+  margin: 0 auto; 
 }
 
 .swiper-slide.cruze-pics {
-  margin-right: 160px; /* Adjust the value as needed for desired spacing */
+  margin-right: 160px; 
 }
 
 .swiper-slide.dancing {
-  margin-right: 70px; /* Adjust the value as needed for desired spacing */
+  margin-right: 70px; 
 }
 
 .swiper-slide.last-pic {
-  margin-right: -20px; /* Adjust the value as needed for desired spacing */
+  margin-right: -20px; 
 }
 
-
-.photo-gallery img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  filter: hue-rotate(90deg); /* Add rainbow hue */
-}
-
-.photo-gallery img:hover {
-  transform: scale(1.05);
-  filter: hue-rotate(0deg); /* Reset hue on hover */
-}
 
 .video-container {
   position: relative;
@@ -193,17 +176,61 @@ main {
   height: 100%;
 }
 
-.social-like {
-  display: flex;
-  justify-content: center;
-}
-
 .qr-code {
   text-align: center;
 }
 
 .qa-container {
-  margin-top: 40px;
+  margin-top: 20px;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+main {
+  padding-top: 60px;
+}
+
+.section {
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 800px;
+  background-color: #ff9292;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: purple;
+}
+
+
+.qa-list {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.qa-details {
+  margin-top: 5px;
+}
+
+.qa-difference {
+  margin-bottom: 10px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .qa-item {
@@ -226,11 +253,6 @@ main {
   color: purple;
 }
 
-.qa-list {
-  list-style: none;
-  padding-left: 40px;
-}
-
 .qa-details {
   margin-top: 10px;
   font-size: 18px;
@@ -239,8 +261,6 @@ main {
 .qa-difference {
   margin-bottom: 20px;
 }
-
-
 
 form {
   margin-top: 40px;
@@ -267,7 +287,7 @@ textarea {
 }
 
 select{
-  background-color: #ff0000;
+  background-color: purple;
   color:#ffffff;
   padding: 10px 10px; 
   border: none;
@@ -327,14 +347,14 @@ input[type="submit"]:hover {
       margin: 10px 0;
   }
 
-  .section {
-      padding: 40px 20px;
-  }
-
-  .qa-details {
-      font-size: 16px;
-  }
+ 
 }
+
+
+#like {
+  text-align: center;
+}
+
 
 /* Rainbow animation */
 @keyframes rainbow {
